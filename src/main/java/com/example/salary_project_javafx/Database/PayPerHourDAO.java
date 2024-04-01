@@ -3,9 +3,7 @@ package com.example.salary_project_javafx.Database;
 import java.sql.*;
 
 public class PayPerHourDAO {
-    private static String user="preguntarme";
-    private static String password ="Preguntarme";
-    private static String strConexion = "jdbc:mysql://database-salary-project.clae0oycgbhc.us-east-1.rds.amazonaws.com/project_salary?user="+user+"&password="+password+".&useSSL=false";
+    private static String strConexion = "jdbc:mysql://database-salary-project.clae0oycgbhc.us-east-1.rds.amazonaws.com/project_salary?user=" + DatabaseInfo.getUser() + "&password=" + DatabaseInfo.getPassword() + ".&useSSL=false";
 
     public static String getLastPayPerHour() {
         String lastPayHour = "0";
