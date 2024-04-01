@@ -1,6 +1,8 @@
 package com.example.salary_project_javafx.Database;
 
+import java.math.BigDecimal;
 import java.sql.*;
+import java.time.LocalDate;
 
 public class PayPerHourDAO {
     private static String strConexion = "jdbc:mysql://database-salary-project.clae0oycgbhc.us-east-1.rds.amazonaws.com/project_salary?user=" + DatabaseInfo.getUser() + "&password=" + DatabaseInfo.getPassword() + ".&useSSL=false";
@@ -27,4 +29,22 @@ public class PayPerHourDAO {
         }
         return lastPayHour;
     }
+    public static String createRecordPayPerHour(String newHourPay){
+        String result = "El pago por hora fue actualizado.";
+        try {
+            BigDecimal newHourPayDecimalValue = new BigDecimal(newHourPay);
+            String query = "INSERT INTO HOURPAY(date, hourpay) VALUES('" + LocalDate.now() + "','" + newHourPayDecimalValue +"')";
+            Connection conn = null;
+
+            Statement stmt = null;
+            conn = DriverManager.getConnection(strConexion);
+            stmt = conn.createStatement();
+            stmt.execute(query);
+        }
+        catch (Exception e){
+            result = "Hubo un error: " + e.getMessage() + ". Intente de nuevo o contacte al administrador.";
+        }
+        return result;
+    }
+
 }

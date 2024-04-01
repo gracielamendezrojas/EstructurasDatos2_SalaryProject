@@ -23,7 +23,7 @@
            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #8FCACA;">
                   <children>
                      <Label alignment="CENTER" layoutX="36.0" layoutY="50.0" prefHeight="57.0" prefWidth="476.0" text="Esta sección se diseñó para cambiar el pago por hora en dólares ($) " textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS" />
-                     <Button layoutX="345.0" layoutY="115.0" mnemonicParsing="false" style="-fx-background-color: green;" styleClass="ChangePayPerHourButton" text="Cambiar" textFill="WHITE" />
+                     <Button layoutX="345.0" layoutY="115.0" mnemonicParsing="false" style="-fx-background-color: green;" fx:id="ChangePayPerHourButton" onAction="#onClickButton" text="Cambiar" textFill="WHITE" />
                      <TextField fx:id="PayPerHour" layoutX="113.0" layoutY="115.0" prefHeight="25.0" prefWidth="203.0" style="-fx-background-color: white;" />
                      <Label alignment="CENTER" layoutX="101.0" layoutY="2.0" prefHeight="57.0" prefWidth="320.0" text="Pago por hora" textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS">
                         <font>
