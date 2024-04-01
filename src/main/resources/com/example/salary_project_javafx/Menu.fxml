@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="759.0" prefWidth="587.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.salary_project_javafx.MenuController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <TabPane prefHeight="792.0" prefWidth="547.0" tabClosingPolicy="UNAVAILABLE">
+     <tabs>
+       <Tab style="-fx-background-color: #D4F0F0;" text="Pago por hora">
+         <content>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #8FCACA;">
+                  <children>
+                     <Label alignment="CENTER" layoutX="36.0" layoutY="50.0" prefHeight="57.0" prefWidth="476.0" text="Esta sección se diseñó para cambiar el pago por hora en dólares ($) " textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS" />
+                     <Button layoutX="345.0" layoutY="115.0" mnemonicParsing="false" style="-fx-background-color: green;" styleClass="ChangePayPerHourButton" text="Cambiar" textFill="WHITE" />
+                     <TextField fx:id="PayPerHour" layoutX="113.0" layoutY="115.0" prefHeight="25.0" prefWidth="203.0" style="-fx-background-color: white;" />
+                     <Label alignment="CENTER" layoutX="101.0" layoutY="2.0" prefHeight="57.0" prefWidth="320.0" text="Pago por hora" textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </AnchorPane>
+         </content>
+       </Tab>
+         <Tab style="-fx-background-color: #edf4f9;" text="Usuarios">
+            <content>
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #aec8ed;">
+                  <children>
+                     <Label alignment="CENTER" layoutX="94.0" layoutY="14.0" prefHeight="57.0" prefWidth="320.0" text="Registrar usuario " textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <TextField id="UserName" layoutX="105.0" layoutY="83.0" style="-fx-background-color: white;" />
+                     <Label layoutX="40.0" layoutY="87.0" text="Nombre:" />
+                     <Label layoutX="294.0" layoutY="87.0" text="Apellido:" />
+                     <TextField id="UserLastName" layoutX="348.0" layoutY="83.0" style="-fx-background-color: white;" />
+                     <Label layoutX="42.0" layoutY="122.0" text="Cédula: " />
+                     <TextField id="UserId" layoutX="105.0" layoutY="118.0" style="-fx-background-color: white;" />
+                     <Button id="UserRegistryButton" layoutX="234.0" layoutY="162.0" mnemonicParsing="false" style="-fx-background-color: green;" text="Registrar" textFill="WHITE" />
+                  </children>
+               </AnchorPane>
+            </content>
+         </Tab>
+       <Tab style="-fx-background-color: #FFEECC;" text="Ingreso de horas trabajadas">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="628.0" prefWidth="529.0" style="-fx-background-color: #FFDDCC;">
+                  <children>
+                     <Label alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="27.0" prefWidth="130.0" text="Buscar usuario" textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <DatePicker id="DateInit" layoutX="135.0" layoutY="171.0" />
+                     <DatePicker id="DateFinal" layoutX="135.0" layoutY="202.0" />
+                     <Label layoutX="14.0" layoutY="53.0" text="Cédula del usuario:  " />
+                     <TextField id="UserIdSearch" layoutX="135.0" layoutY="49.0" />
+                     <Button id="UserIdSearchButton" layoutX="303.0" layoutY="49.0" mnemonicParsing="false" style="-fx-background-color: green;" text="Buscar" textFill="WHITE" />
+                     <Label layoutX="16.0" layoutY="86.0" text="Nombre completo: " />
+                     <TextField id="UserFullName" editable="false" layoutX="135.0" layoutY="82.0" style="-fx-background-color: #f2f2f2;" />
+                     <Label alignment="CENTER" layoutX="15.0" layoutY="130.0" prefHeight="27.0" prefWidth="59.0" text="Fechas" textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label layoutX="15.0" layoutY="175.0" text="Fecha inicio:" />
+                     <Label layoutX="15.0" layoutY="206.0" text="Fecha final:" />
+                     <Label layoutX="16.0" layoutY="334.0" text="Primera semana" />
+                     <Label layoutX="16.0" layoutY="362.0" text="Segunda semana" />
+                     <TextField id="WorkedHoursMonday1" layoutX="120.0" layoutY="330.0" prefHeight="25.0" prefWidth="36.0" />
+                     <TextField id="WorkedHoursTuesday1" layoutX="166.0" layoutY="330.0" prefHeight="25.0" prefWidth="36.0" />
+                     <TextField id="WorkedHoursMonday2" layoutX="120.0" layoutY="358.0" prefHeight="25.0" prefWidth="36.0" />
+                     <TextField id="WorkedHoursTuesday2" layoutX="166.0" layoutY="358.0" prefHeight="25.0" prefWidth="36.0" />
+                     <TextField id="WorkedHoursWednesday1" layoutX="211.0" layoutY="330.0" prefHeight="25.0" prefWidth="36.0" />
+                     <TextField id="WorkedHoursWednesday2" layoutX="211.0" layoutY="358.0" prefHeight="25.0" prefWidth="36.0" />
+                     <TextField id="WorkedHoursThursday1" layoutX="256.0" layoutY="332.0" prefHeight="25.0" prefWidth="36.0" />
+                     <TextField id="WorkedHoursFriday1" layoutX="302.0" layoutY="332.0" prefHeight="25.0" prefWidth="36.0" />
+                     <TextField id="WorkedHoursThursday2" layoutX="256.0" layoutY="360.0" prefHeight="25.0" prefWidth="36.0" />
+                     <TextField id="WorkedHoursFriday2" layoutX="302.0" layoutY="360.0" prefHeight="25.0" prefWidth="36.0" />
+                     <TextField id="WorkedHoursSaturday1" layoutX="347.0" layoutY="332.0" prefHeight="25.0" prefWidth="36.0" />
+                     <TextField id="WorkedHoursSaturday2" layoutX="347.0" layoutY="360.0" prefHeight="25.0" prefWidth="36.0" />
+                     <TextField id="WorkedHoursSunday1" layoutX="398.0" layoutY="332.0" prefHeight="25.0" prefWidth="36.0" />
+                     <TextField id="WorkedHoursSunday1" layoutX="398.0" layoutY="360.0" prefHeight="25.0" prefWidth="36.0" />
+                     <Text layoutX="135.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L" wrappingWidth="5.6484375">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Text>
+                     <Text layoutX="271.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="J" wrappingWidth="5.6484375">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Text>
+                     <Text layoutX="222.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M" wrappingWidth="14.6484375">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Text>
+                     <Text layoutX="181.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="K" wrappingWidth="5.6484375">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Text>
+                     <Text layoutX="313.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="V" wrappingWidth="5.6484375">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Text>
+                     <Text layoutX="362.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S" wrappingWidth="5.6484375">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Text>
+                     <Text layoutX="411.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D" wrappingWidth="5.6484375">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Text>
+                     <Button id="calculateWorkedHoursButton" layoutX="449.0" layoutY="343.0" mnemonicParsing="false" style="-fx-background-color: green;" text="Calcular" textFill="WHITE" />
+                     <Label layoutX="16.0" layoutY="418.0" text="Total de horas trabajadas (h):" />
+                     <Label layoutX="18.0" layoutY="448.0" text="Total de horas extra (h):" />
+                     <Label layoutX="17.0" layoutY="477.0" prefHeight="17.0" prefWidth="169.0" text="Salario de horas regulares ($):" />
+                     <Label layoutX="17.0" layoutY="507.0" prefHeight="17.0" prefWidth="169.0" text="Salario de horas extra ($):" />
+                     <Label alignment="CENTER" layoutX="13.0" layoutY="259.0" prefHeight="27.0" prefWidth="148.0" text="Horas trabajadas" textAlignment="JUSTIFY" textOverrun="LEADING_WORD_ELLIPSIS">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <TextField id="TotalWorkedHours2Weeks" editable="false" layoutX="195.0" layoutY="414.0" style="-fx-background-color: #f2f2f2;" />
+                     <TextField id="TotalExtraWorkedHours" editable="false" layoutX="196.0" layoutY="444.0" style="-fx-background-color: #f2f2f2;" />
+                     <TextField id="BaseSalary" editable="false" layoutX="196.0" layoutY="473.0" style="-fx-background-color: #f2f2f2;" />
+                     <TextField id="ExtraWorkedHoursSalary" editable="false" layoutX="196.0" layoutY="503.0" style="-fx-background-color: #f2f2f2;" />
+                     <Label layoutX="14.0" layoutY="538.0" prefHeight="17.0" prefWidth="146.0" text="Salario total ($):" />
+                     <TextField id="TotalSalary" editable="false" layoutX="196.0" layoutY="534.0" style="-fx-background-color: #f2f2f2;" />
+                     <Button id="SaveWorkedHoursButton" layoutX="200.0" layoutY="588.0" mnemonicParsing="false" style="-fx-background-color: green;" text="Guardar" textFill="WHITE" />
+                     <Button id="CancelButton" layoutX="278.0" layoutY="588.0" mnemonicParsing="false" style="-fx-background-color: #990F02;" text="Cancelar" textFill="WHITE" />
+                  </children>
+               </AnchorPane>
+         </content>
+       </Tab>
+     </tabs>
+   </TabPane>
+
+  <Label fx:id="welcomeText" />
+</VBox>
