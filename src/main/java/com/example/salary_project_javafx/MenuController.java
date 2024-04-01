@@ -18,20 +18,26 @@ public class MenuController {
     @FXML
     private TextField PayPerHour ;
     @FXML
-    private Button ChangePayPerHourButton;
+    private TextField UserName;
+    @FXML
+    private TextField UserLastName;
+    @FXML
+    private TextField UserId;
 
     @FXML
     public  void initialize(){
         PayPerHour.setText(PayPerHourDAO.getLastPayPerHour());
     }
 
-
-
-    public void onClickButton(ActionEvent event) {
+    public void onClickButtonPayPerHour(ActionEvent event) {
         String result = PayPerHourDAO.createRecordPayPerHour(PayPerHour.getText());
         AlertBox("Transaccción", result);
     }
 
+    public void onClickUserRegistryButton(ActionEvent event) {
+        String result = UsersDAO.createUser(UserId.getText(),UserName.getText(), UserLastName.getText());
+        AlertBox("Transaccción", result);
+    }
     public void AlertBox(String title, String message){
         Stage ventana = new Stage();
 
@@ -46,7 +52,9 @@ public class MenuController {
         botonCerrar.setAlignment(Pos.CENTER);
         botonCerrar.setOnAction(e -> {
             ventana.close();
-
+            UserName.clear();
+            UserLastName.clear();
+            UserId.clear();
         });
 
         VBox layout = new VBox(50);

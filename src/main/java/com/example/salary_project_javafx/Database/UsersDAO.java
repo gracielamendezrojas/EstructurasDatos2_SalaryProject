@@ -27,7 +27,8 @@ public class UsersDAO {
             System.out.println(e.getMessage());
         }
     }
-    public static void createUser(String id, String name, String lastname){
+    public static String createUser(String id, String name, String lastname){
+        String result ="El usuario fue creado de forma exitosa. ";
         try {
 
             String query = "INSERT INTO USERS(ID,NAME,LASTNAME) VALUES('" + id + "','" + name + "','" + lastname +"')";
@@ -39,8 +40,9 @@ public class UsersDAO {
             stmt.execute(query);
         }
         catch (Exception e){
-            System.out.println(e.getMessage());
+            result = "Hubo un error: " + e.getMessage() + ". Intente de nuevo o contacte al administrador.";
         }
+        return result;
     }
 
 

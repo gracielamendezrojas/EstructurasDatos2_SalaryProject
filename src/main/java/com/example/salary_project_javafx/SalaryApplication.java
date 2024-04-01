@@ -19,8 +19,6 @@ public class SalaryApplication extends Application {
     }
 
     public static void main(String[] args) {
-        UsersDAO.listUsers();
-        UsersDAO.createUser("1123746297", "Álvaro", "Fallas");
         launch();
     }
 }
